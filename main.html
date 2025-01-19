@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio Buttons</title>
+</head>
+<body>
+    <div id="buttonContainer"></div>
+    <audio id="audioPlayer">
+        <source id="audioSource" src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Define an array of audio files and their corresponding labels
+        const audioFiles = [
+            { label: "Vine Boom", src: "https://github.com/BlueBerri0/soundboard/blob/main/BOOM.mp3?raw=true" },
+            { label: "5 Big Booms", src: "https://github.com/BlueBerri0/soundboard/blob/main/5BigBooms.mp3?raw=true" },
+            { label: "Stone sliding", src: "https://github.com/BlueBerri0/soundboard/blob/main/StoneSliding.mp3?raw=true" },
+            { label: "GetOut", src: "https://github.com/BlueBerri0/soundboard/blob/main/GETOUT.mp3?raw=true" },
+            { label: "Bruh", src: "https://github.com/BlueBerri0/soundboard/blob/main/Bruh.mp3?raw=true" },
+            { label: "HOG RIDA(LOUD)", src: "https://github.com/BlueBerri0/soundboard/blob/main/Hog%20Rida(LOUD).mp3?raw=true" },
+            { label: "Kahoot(loud)", src: "https://github.com/BlueBerri0/soundboard/blob/main/kahootmusic.mp3?raw=true" },
+            { label: "Ganster's paradise", src: "https://github.com/BlueBerri0/soundboard/blob/main/Ganster's%20paradise.mp3?raw=true" },
+            { label: "Indian(LOUD)", src: "https://github.com/BlueBerri0/soundboard/blob/main/iddianmeme.mp3?raw=true" },
+            { label: "Iphone Remix", src: "https://github.com/BlueBerri0/soundboard/blob/main/Iphone%20remix.mp3?raw=true" },
+        ];
+
+        const buttonContainer = document.getElementById("buttonContainer");
+        const audioPlayer = document.getElementById("audioPlayer");
+        const audioSource = document.getElementById("audioSource");
+
+        // Dynamically create buttons
+        audioFiles.forEach(file => {
+            const button = document.createElement("button");
+            button.textContent = file.label;
+            button.addEventListener("click", () => {
+                audioSource.src = file.src;
+                audioPlayer.load(); // Load the new audio file
+                audioPlayer.play(); // Play the audio
+            });
+            buttonContainer.appendChild(button);
+        });
+    </script>
+</body>
+</html>
