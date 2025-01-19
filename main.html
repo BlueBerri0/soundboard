@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Play Audio Buttons</title>
+    <title>Schoology</title>
 </head>
 <body>
     <div id="buttonContainer"></div>
@@ -13,7 +13,6 @@
     </audio>
 
     <script>
-        // Define an array of audio files and their corresponding labels
         const audioFiles = [
             { label: "Vine Boom", src: "https://github.com/BlueBerri0/soundboard/blob/main/BOOM.mp3?raw=true" },
             { label: "5 Big Booms", src: "https://github.com/BlueBerri0/soundboard/blob/main/5BigBooms.mp3?raw=true" },
@@ -25,13 +24,29 @@
             { label: "Ganster's paradise", src: "https://github.com/BlueBerri0/soundboard/blob/main/Ganster's%20paradise.mp3?raw=true" },
             { label: "Indian(LOUD)", src: "https://github.com/BlueBerri0/soundboard/blob/main/iddianmeme.mp3?raw=true" },
             { label: "Iphone Remix", src: "https://github.com/BlueBerri0/soundboard/blob/main/Iphone%20remix.mp3?raw=true" },
+            { label: "Android", src: "https://github.com/BlueBerri0/soundboard/blob/main/android.mp3?raw=true" },
+            { label: "FBI OPEN UP", src: "https://github.com/BlueBerri0/soundboard/blob/main/fbiopenup.mp3?raw=true" },
+            { label: "Rizz", src: "https://github.com/BlueBerri0/soundboard/blob/main/rizz.mp3?raw=true" },
+            { label: "Deez nuts", src: "https://github.com/BlueBerri0/soundboard/blob/main/deeznuts.mp3?raw=true" },
+            { label: "Old spice", src: "https://github.com/BlueBerri0/soundboard/blob/main/oldspice.mp3?raw=true" },
+            { label: "Crickets", src: "https://github.com/BlueBerri0/soundboard/blob/main/crickets.mp3?raw=true" },
+            { label: "Dramatic", src: "https://github.com/BlueBerri0/soundboard/blob/main/dramatic.mp3?raw=true" },
+            { label: "Sponge bob fail", src: "https://github.com/BlueBerri0/soundboard/blob/main/spongebobfail.mp3?raw=true" },
+            { label: "2k years later", src: "https://github.com/BlueBerri0/soundboard/blob/main/2k%20years%20later.mp3?raw=true" },
+            { label: "Apple bottom jeans", src: "https://github.com/BlueBerri0/soundboard/blob/main/applebottomjeans.mp3?raw=true" },
+            { label: "Error", src: "https://github.com/BlueBerri0/soundboard/blob/main/error.mp3?raw=true" },
+            { label: "Ohio", src: "https://github.com/BlueBerri0/soundboard/blob/main/ohio.mp3?raw=true" },
+            { label: "Outro", src: "https://github.com/BlueBerri0/soundboard/blob/main/outro.mp3?raw=true" },
+            { label: "Sigma", src: "https://github.com/BlueBerri0/soundboard/blob/main/sigma.mp3?raw=true" },
+            { label: "Metal pipe", src: "https://github.com/BlueBerri0/soundboard/blob/main/metal%20pipe.mp3?raw=true" },
+            { label: "Amogus", src: "https://github.com/BlueBerri0/soundboard/blob/main/amogus.mp3?raw=true" },
+            { label: "Oof", src: "https://github.com/BlueBerri0/soundboard/blob/main/oof.mp3?raw=true" }
         ];
 
         const buttonContainer = document.getElementById("buttonContainer");
         const audioPlayer = document.getElementById("audioPlayer");
         const audioSource = document.getElementById("audioSource");
 
-        // Dynamically create buttons
         audioFiles.forEach(file => {
             const button = document.createElement("button");
             button.textContent = file.label;
